@@ -6,11 +6,11 @@ const RUNTIME_CACHE = 'codelab-runtime-v2.0';
 
 // Assets a cachear en instalación (shell de la app)
 const PRECACHE_ASSETS = [
-  '/index.html',
-  '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/icons/apple-touch-icon.png',
+  '/qr_barcode_app/index.html',
+  '/qr_barcode_app/manifest.json',
+  '/qr_barcode_app/icons/icon-192x192.png',
+  '/qr_barcode_app/icons/icon-512x512.png',
+  '/qr_barcode_app/icons/apple-touch-icon.png',
 ];
 
 // CDN libs a cachear dinámicamente en primer uso
