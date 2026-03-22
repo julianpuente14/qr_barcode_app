@@ -1,16 +1,16 @@
-// CodeLab Service Worker v2.0
+// CodeLab Service Worker v2.1
 // Estrategia: Cache First para assets, Network First para APIs externas
 
-const CACHE_NAME = 'codelab-v2.0';
-const RUNTIME_CACHE = 'codelab-runtime-v2.0';
+const CACHE_NAME = 'codelab-v2.1';
+const RUNTIME_CACHE = 'codelab-runtime-v2.1';
 
 // Assets a cachear en instalación (shell de la app)
 const PRECACHE_ASSETS = [
-  '/qr_barcode_app/index.html',
-  '/qr_barcode_app/manifest.json',
-  '/qr_barcode_app/icons/icon-192x192.png',
-  '/qr_barcode_app/icons/icon-512x512.png',
-  '/qr_barcode_app/icons/apple-touch-icon.png',
+  './index.html',
+  './manifest.json',
+  './icons/icon-192x192.png',
+  './icons/icon-512x512.png',
+  './icons/apple-touch-icon.png',
 ];
 
 // CDN libs a cachear dinámicamente en primer uso
@@ -131,7 +131,7 @@ async function networkFirstThenCache(request) {
     const cached = await caches.match(request);
     if (cached) return cached;
     // Fallback al index si el recurso no existe offline
-    return caches.match('/qr_barcode_app/index.html');
+    return caches.match('./index.html');
   }
 }
 
