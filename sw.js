@@ -131,7 +131,7 @@ async function networkFirstThenCache(request) {
     const cached = await caches.match(request);
     if (cached) return cached;
     // Fallback al index si el recurso no existe offline
-    return caches.match('/index.html');
+    return caches.match('/qr_barcode_app/index.html');
   }
 }
 

@@ -1225,7 +1225,7 @@ let swRegistration = null;
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      const reg = await navigator.serviceWorker.register('sw.js', { scope: '/' });
+      const reg = await navigator.serviceWorker.register('sw.js', { scope: '/qr_barcode_app/' });
       swRegistration = reg;
       console.log('[PWA] Service Worker registrado:', reg.scope);
 
